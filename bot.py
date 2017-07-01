@@ -132,7 +132,7 @@ def callback_buttons(call):
             try:
                 delete_job(call.message.reply_to_message.text)
             except:
-                delete_job(call.message.text.split('Post info\n\n')[1])
+                delete_job(call.message.text.split('\n\n')[1])
             bot.answer_callback_query(call.id, 'Cancelled')
             bot.edit_message_text('*Cancelled*', call.message.chat.id,
                                   call.message.message_id, parse_mode='Markdown')
@@ -141,8 +141,10 @@ def callback_buttons(call):
             markup = types.InlineKeyboardMarkup(row_width=2)
             markup.row(types.InlineKeyboardButton('◀ Back', callback_data='list'),
                        types.InlineKeyboardButton('🚫 Cancel 🕒', callback_data='cancel'))
-            bot.edit_message_text('*Post info*\n\n' + p.get(call.data).decode('utf-8'), call.message.chat.id,
-                                  call.message.message_id, parse_mode='Markdown', reply_markup=markup)
+            bot.edit_message_text(
+                '*Post info*\nWill be posted every {} minutes 🕒\n\n'.format(call.data.split('post')[0]) + p.get(
+                    call.data).decode('utf-8'), call.message.chat.id,
+                call.message.message_id, parse_mode='Markdown', reply_markup=markup)
         elif 'list' in call.data:
             bot.answer_callback_query(call.id)
             markup = types.InlineKeyboardMarkup()
@@ -161,7 +163,7 @@ def start_command(message):
                          parse_mode='HTML')
 
 
-@bot.message_handler(commands=['post'])
+@bot.message_handler(commands=['add'])
 def post_command(message):
     if check_legit(message):
         markup = types.ForceReply(selective=False)
