@@ -41,11 +41,11 @@ def check_legit(message):
         return False
 
 
-def check_list(id):
-    if r.get(str(id)):
+def check_list(uid):
+    if r.get(str(uid)):
         return
     else:
-        r.set(str(id), str(id))
+        r.set(str(uid), str(uid))
 
 
 def announce(text):
@@ -153,7 +153,7 @@ def text_handling(message):
 def new_chat_handler(message):
     for member in message.new_chat_members:
         if member['id'] == bot.get_me().id:
-            check_legit(message.chat.id)
+            check_list(message.chat.id)
 
 
 bot.polling(none_stop=True)
