@@ -14,19 +14,23 @@
     },
   "ADMIN2": {
       "description": "Addidtional Bot's Admin, leave 0 if not used",
-      "required": false
+      "required": false,
+      "value": "0"
     },
   "ADMIN3": {
       "description": "Addidtional Bot's Admin, leave 0 if not used",
-      "required": false
+      "required": false,
+      "value": "0"
     },
   "ADMIN4": {
       "description": "Addidtional Bot's Admin, leave 0 if not used",
-      "required": false
+      "required": false,
+      "value": "0"
     },
   "ADMIN5": {
       "description": "Addidtional Bot's Admin, leave 0 if not used",
-      "required": false
+      "required": false,
+      "value": "0"
     }
   },
  "addons": [
