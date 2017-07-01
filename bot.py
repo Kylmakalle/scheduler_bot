@@ -152,7 +152,7 @@ def text_handling(message):
 @bot.message_handler(content_types=['new_chat_members'])
 def new_chat_handler(message):
     for member in message.new_chat_members:
-        if member.id == bot.get_me().id:
+        if member['id'] == bot.get_me().id:
             check_legit(message.chat.id)
 
 
