@@ -1,0 +1,44 @@
+{
+  "name": "SchedulerBot",
+  "description": "Telegram Bot that schedule post sending",
+  "repository": "https://github.com/Kylmakalle/scheduler_bot",
+  "keywords": ["schedule", "bot", "telegram"],
+  "env": {
+    "TELEGRAM_TOKEN": {
+      "description": "Telegram bot API authentication token from https://t.me/BotFather",
+      "value": "123456789:AAABBBCCCDDDEEEFFFGGGHHHIIIJJJKKKLL"
+    }
+  "ADMIN1": {
+      "description": "Bot's Admin id from https://t.me/myidbot (/getid command)",
+      "value": "0"
+    }
+  "ADMIN2": {
+      "description": "Addidtional Bot's Admin, leave 0 if not used",
+      "value": "0"
+    }
+  "ADMIN3": {
+      "description": "Addidtional Bot's Admin, leave 0 if not used",
+      "value": "0"
+    }
+  "ADMIN4": {
+      "description": "Addidtional Bot's Admin, leave 0 if not used",
+      "value": "0"
+    }
+  "ADMIN5": {
+      "description": "Addidtional Bot's Admin, leave 0 if not used",
+      "value": "0"
+    }
+  }
+"addons": [
+    "heroku-redis",
+    {
+      "plan": "hobby-dev",
+      "as": "Redis"
+    },
+    {
+      "plan": "hobby-dev",
+      "as": "Cobalt"
+    }
+    }
+  ]
+}
