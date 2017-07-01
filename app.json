@@ -9,23 +9,24 @@
       "value": "123456789:AAABBBCCCDDDEEEFFFGGGHHHIIIJJJKKKLL"
     },
   "ADMIN1": {
-      "description": "Bot's Admin id from https://t.me/myidbot (/getid command)"
+      "description": "Bot's Admin id from https://t.me/myidbot (/getid command)",
+      "required": true
     },
   "ADMIN2": {
       "description": "Addidtional Bot's Admin, leave 0 if not used",
-      "value": "0"
+      "required": false
     },
   "ADMIN3": {
       "description": "Addidtional Bot's Admin, leave 0 if not used",
-      "value": "0"
+      "required": false
     },
   "ADMIN4": {
       "description": "Addidtional Bot's Admin, leave 0 if not used",
-      "value": "0"
+      "required": false
     },
   "ADMIN5": {
       "description": "Addidtional Bot's Admin, leave 0 if not used",
-      "value": "0"
+      "required": false
     }
   },
  "addons": [
@@ -38,10 +39,10 @@
       "as": "Cobalt"
     }
   ],
-  "repository": "https://github.com/Kylmakalle/scheduler_bot",
 "formation": {
     "bot": {
       "quantity": 1,
-      "size": "hobby"
+      "size": "free"
     }
+  }
 }
