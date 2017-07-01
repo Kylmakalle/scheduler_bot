@@ -50,7 +50,7 @@ def check_list(uid):
 
 def announce(text):
     for key in r.scan_iter():
-        if not int(r.get(key).decode('utf-8')) in admins:
+        if not r.get(key).decode('utf-8') in admins:
             try:
                 bot.send_message(r.get(key).decode('utf-8'), text, parse_mode='Markdown')
             except Exception as e:
