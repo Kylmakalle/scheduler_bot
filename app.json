@@ -29,7 +29,7 @@
       "value": "0"
     }
   },
-"addons": [
+ "addons": [
     "heroku-redis",
     {
       "plan": "hobby-dev",
@@ -39,6 +39,5 @@
       "plan": "hobby-dev",
       "as": "Cobalt"
     }
-    
   ]
 }
