@@ -9,7 +9,7 @@
       "value": "123456789:AAABBBCCCDDDEEEFFFGGGHHHIIIJJJKKKLL"
     },
   "ADMIN1": {
-      "description": "Bot's Admin id from https://t.me/myidbot (/getid command)",
+      "description": "Bot's Admin id from https://t.me/userinfobot",
       "required": true
     },
   "ADMIN2": {
