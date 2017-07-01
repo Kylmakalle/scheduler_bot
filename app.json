@@ -32,11 +32,11 @@
  "addons": [
     "heroku-redis",
     {
-      "plan": "hobby-dev",
+      "plan": "heroku-redis:hobby-dev",
       "as": "Redis"
     },
     {
-      "plan": "hobby-dev",
+      "plan": "heroku-redis:hobby-dev",
       "as": "Cobalt"
     }
   ]
